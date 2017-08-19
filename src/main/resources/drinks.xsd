@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getDrinkRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDrinkResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="country" type="tns:drink"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="drink">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="type" type="tns:drinkType"/>
+            <xs:element name="calories" type="xs:double"/>
+            <xs:element name="volume" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="drinkType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="alcohol"/>
+            <xs:enumeration value="juice"/>
+            <xs:enumeration value="soda"/>
+            <xs:enumeration value="water"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
+Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2017.08.19 à 06:51:59 PM CEST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://spring.io/guides/gs-producing-web-service">
+    <schemaBindings map="false">
+      <package name="io.spring.guides.gs_producing_web_service"/>
+    </schemaBindings>
+    <bindings scd="tns:getDrinkRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetDrinkRequest"/>
+    </bindings>
+    <bindings scd="tns:getDrinkResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetDrinkResponse"/>
+    </bindings>
+    <bindings scd="~tns:drink">
+      <class ref="io.spring.guides.gs_producing_web_service.Drink"/>
+    </bindings>
+    <bindings scd="~tns:drinkType">
+      <typesafeEnumClass ref="io.spring.guides.gs_producing_web_service.DrinkType"/>
+    </bindings>
+  </bindings>
+</bindings>
+
