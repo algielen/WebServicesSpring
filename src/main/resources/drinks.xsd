@@ -1,5 +1,5 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
-           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://algielen.be"
+           targetNamespace="http://algielen.be" elementFormDefault="qualified">
 
     <xs:element name="getDrinkRequest">
         <xs:complexType>
@@ -12,7 +12,7 @@
     <xs:element name="getDrinkResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="country" type="tns:drink"/>
+                <xs:element name="drink" type="tns:drink"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -20,9 +20,10 @@
     <xs:complexType name="drink">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
+            <xs:element name="id" type="xs:long"/>
             <xs:element name="type" type="tns:drinkType"/>
-            <xs:element name="calories" type="xs:double"/>
-            <xs:element name="volume" type="xs:double"/>
+            <xs:element name="calories" type="xs:double" default="0"/>
+            <xs:element name="volume" type="xs:double" default="0"/>
         </xs:sequence>
     </xs:complexType>
 

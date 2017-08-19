@@ -53,7 +53,7 @@
                 <configuration>
                     <sources>${project.basedir}/src/main/resources/</sources>
                     <outputDirectory>${project.basedir}/src/main/generated</outputDirectory>
-                    <clearOutputDir>false</clearOutputDir>
+                    <clearOutputDir>true</clearOutputDir>
                     <locale>en.us</locale>
                 </configuration>
             </plugin>
