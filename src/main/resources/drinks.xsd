@@ -4,7 +4,7 @@
     <xs:element name="getDrinkRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
+                <xs:element name="unique_name" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -21,15 +21,17 @@
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="id" type="xs:long"/>
-            <xs:element name="type" type="tns:drinkType"/>
+            <xs:element name="unique_name" type="xs:string"/>
+            <xs:element name="type" type="tns:drink_type"/>
             <xs:element name="calories" type="xs:double" default="0"/>
             <xs:element name="volume" type="xs:double" default="0"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="drinkType">
+    <xs:simpleType name="drink_type">
         <xs:restriction base="xs:string">
             <xs:enumeration value="alcohol"/>
+            <xs:enumeration value="infusion"/>
             <xs:enumeration value="juice"/>
             <xs:enumeration value="soda"/>
             <xs:enumeration value="water"/>
